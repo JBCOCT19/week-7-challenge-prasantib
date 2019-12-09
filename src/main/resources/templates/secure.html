@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Secure Page</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel ="stylesheet" href="myCss.css">
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="/list">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcTxZ2Br3j_l61edp1huT_hDg8Fp7z6GQ0lra8C1tIq-rH8wHY4Q&s" width="30" height="30" alt="Home">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/list">Message Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/add">Message Form <span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<h3>Secure Page</h3>
+<a href="/add">Message Form</a>
+
+<a href="/logout">logout</a>
+<h4>email</h4>
+<p th:text="${user.email}"></p><br/>
+<h4>last name</h4>
+<p th:text="${user.lastName}"></p>
+</body>
+</html>
